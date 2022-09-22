@@ -15,6 +15,11 @@
         Target the Top description div and change the DEV Community to <Your_Name> and description to your passion
 
 ### Output
+```javascript
+document.querySelector(".side-bar .crayons-card .crayons-subtitle-2").innerHTML = "iNeuron"
+// and 
+document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I Write Code"
+```
 
 ![Output](./Pic2.png)
 
