@@ -14,13 +14,13 @@
 
         Target the Top description div and change the DEV Community to <Your_Name> and description to your passion
 
-### Output
+
 ```javascript
 document.querySelector(".side-bar .crayons-card .crayons-subtitle-2").innerHTML = "iNeuron"
 // and 
 document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I Write Code"
 ```
-
+### Output
 ![Output](./Pic2.png)
 
 2. Website Name: [Apple](https://support.apple.com/en-in)
@@ -32,6 +32,14 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Fetch all the product name and store in an array
 
 ### Output
+```javascript
+// get list of the products items -
+const products = document.querySelectorAll(".row .as-imagegrid-item .as-imagegrid-item-title ")
+
+// extract the inner text element and filter them out ---
+productNames = []
+products.forEach((e) => productNames.push(e.innerText.replace("\nSupport", "")))
+```
 
 ['iPhone', 'Mac', 'iPad', 'Watch', 'AirPods', 'Music', 'TV']
 
@@ -48,6 +56,23 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
      Add another FAQ 'My New FAQ' to the list
+```javascript
+// ans -
+// selecting the parent element 
+let parent = document.querySelector(".accordion-homepage")
+
+// creating the sub-section 
+let secParent = document.createElement("section")
+secParent.className = "parent"
+// creating the element -
+let newH3 = document.createElement("h3")
+newH3.textContent = "My New FAQ"
+
+// child appending -
+parent.appendChild(secParent)
+secParent.appendChild(newH3)
+
+```
 
 ### Output
 
@@ -66,7 +91,10 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
       Change the contact number
-
+```javascript
+// ans --
+document.querySelector(".customer-support .one-tel-number").innerText = "+91 6366256689"
+```
 ### Output
 
 ![Output](./Pic7.png)
@@ -84,6 +112,9 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
      Target the main div of card and change the Button text to Check out
+```javascript
+document.querySelector(".listing .mytabs .diwali-deals-product-sale-pro .diwali-deals-product-sale-btn").innerText = "Check out"
+```
 
 ### Output
 
@@ -102,6 +133,10 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
      Target the search box and on hover change thebackground color to red.
+```javascript
+// ans --
+document.querySelector(".searchinput___19uW0").addEventLIstener("mouseover", document.querySelector(".searchinput___19uW0").style.backgroundColor="red")
+```
 
 ### Output
 
@@ -122,6 +157,15 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
      To Search a topic in the MDN Search bar.
      First add a text to search in the search bar and then hit the submit search button to search the docs using DOM
 
+```javascript
+// ans - 
+// target the input id -
+document.querySelector("#hp-search-input").value = "Css"
+
+// form submit
+document.querySelector("#hp-search-form").submit()
+
+```
 ### Output
 
 ![Output](./Pic13.png)
@@ -139,7 +183,10 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
      Remove alternate languages from the home page languages listed
-
+```javascript
+// iterate and remove
+document.querySelectorAll("#SIvCob a").forEach((e) => e.remove())
+```
 ### Output
 
 ![Output](./Pic15.png)
@@ -158,6 +205,13 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 
     Change the font family of the text to monospace and text color to the logo’s background color.
 
+```javascript
+// change font family--
+document.querySelector(".display-heading-1").style.fontFamily = "Monospace"
+
+// change font color ---
+document.querySelector(".display-heading-1").style.color = "red"
+```
 ### Output
 
 ![Output](./Pic17.png)
@@ -175,7 +229,9 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
     Target the button and change background colour on mouseover
-
+```javascript
+document.querySelector(".login-btn-text").addEventListener("mouseover", document.querySelector(".login-btn-text").style.backgroundColor="red")
+```
 ### Output
 
 ![Output](./Pic19.png)
@@ -193,7 +249,9 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
     change the realme logo to ineuron logo
-
+```javascript
+document.querySelector(".logo .icon-logo").style.backgroundImage = "url('https://ineuron.ai/images/ineuron-logo.png')";
+```
 ### Output
 
 ![Output](./Pic21.png)
@@ -211,7 +269,11 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 ### Tasks
 
      change the background colour of the button to blue.
-
+```javascript
+// for some reason new button is available inplace create new button in my account --
+// so i have target the new button and change the color to blue
+document.querySelector(".d-md-flex .btn").style.backgroundColor = "blue"
+```
 ### Output
 
 ![Output](./Pic23.png)
@@ -230,6 +292,10 @@ document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I 
 
 Target the top description and change “Matching developers with great companies” to ‘JSBOOTCAMP“.
 
+```javascript
+// ans - 
+document.querySelector(".fl-module .fl-module-content .fl-heading .fl-heading-text").innerText = "JSBOOTCAMP"
+```
 ### Output
 
 ![Output](./Pic25.png)
@@ -248,6 +314,10 @@ Target the top description and change “Matching developers with great companie
 
        change the fontsize of “Hot Deals” to 80px
 
+```javascript
+// ans --
+document.querySelector(".HotDealsAll__Heading__2fIbe").style.fontSize="80px"
+```
 ### Output
 
 ![Output](./Pic27.png)
@@ -265,7 +335,9 @@ Target the top description and change “Matching developers with great companie
 ### Tasks
 
        Convert the text “G15 Gaming Laptop” from left to right
-
+```javascript
+document.querySelector("#d560823win9b .ps-top .ps-title").style.textAlign="right"
+```
 ### Output
 
 ![Output](./Pic29.png)
